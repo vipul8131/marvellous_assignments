@@ -16,7 +16,6 @@ def KnnClassifier(data, studyHrs, attdnc):
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
     # print("X_scaled:",X_scaled)
-
     model = KNeighborsClassifier(n_neighbors=3)
     model.fit(X_scaled, y)
 

@@ -30,7 +30,6 @@ def GetKneighborsClassifier():
         model = KNeighborsClassifier(n_neighbors=i)
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
-
         print("Actual result of the model:", y_test)
         print("Predicted Result of the model: ",y_pred)
 
@@ -42,7 +41,7 @@ def GetKneighborsClassifier():
 
         print(f"Predicted result for K={i} is: {y_pred}")
     # Result is changing because of changing n_neighbors. n_neighbors is hyperparameter which is decide how many neighbors need to consider near by new_point
-    
+
 
 
 def main():

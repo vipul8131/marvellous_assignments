@@ -44,6 +44,7 @@ def main():
         {'point': 'C', 'X': 3, 'Y': 1, 'label': 'Blue'},
         {'point': 'D', 'X': 6, 'Y': 5, 'label': 'Blue'}
     ]
+    
     KNNClassfier(x,y, dataset)
 
 if __name__ == "__main__":
