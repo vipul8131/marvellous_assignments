@@ -51,7 +51,7 @@ def main():
     print("Classfication report of randomforest:")
     print(classification_report(y_test, y_rf_pred))
 
-    model_bagging = BaggingClassifier(n_estimators=100)
+    model_bagging = BaggingClassifier(n_estimators=100, estimator=model_tree)
     # train and predict BaggingClassifier model
     model_bagging.fit(X_train, y_train)
     y_bag_pred = model_bagging.predict(X_test)
