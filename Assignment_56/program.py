@@ -27,7 +27,7 @@ def main():
 
     # splitting dataset into 4 parts for training and testing
 
-    X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
     # load the models
     model_tree = DecisionTreeClassifier(max_depth=5)
@@ -82,6 +82,8 @@ def main():
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
+
+    print("Predicted result of voting:", y_pred)
 
     accuracy_model = accuracy_score(y_test, y_pred)
 
